@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contactForm" aria-describedby="formInstructions">
+            <!-- Name Section -->
+            <div class="form-group row">
+                <div class="half-width">
+                    <label for="firstName">First Name<span class="star">*</span></label>
+                    <input type="text" id="firstName" name="firstName" aria-required="true">
+                    <span class="error-message" id="firstNameError" role="alert"></span>
+                </div>
+                <div class="half-width">
+                    <label for="lastName">Last Name<span class="star">*</span></label>
+                    <input type="text" id="lastName" name="lastName" aria-required="true">
+                    <span class="error-message" id="lastNameError" role="alert"></span>
+                </div>
+            </div>
+
+            <!-- Email Section -->
+            <div class="form-group">
+                <label for="email">Email<span class="star">*</span></label>
+                <input type="email" id="email" name="email" aria-required="true">
+                <span class="error-message" id="emailError" role="alert"></span>
+            </div>
+
+            <!-- Query Type Section -->
+            <div class="form-group">
+                <label>Query Type Section<span class="star">*</span></label>
+
+                <div class="form-group-box">
+                    <div class="query-type-box">
+                        <input type="radio" id="generalEnquiry" name="queryType" value="General Enquiry"
+                            aria-required="true">
+                        <p>General Enquiry</p>
+                    </div>
+
+                    <div class="query-type-box">
+                        <input type="radio" id="supportRequest" name="queryType" value="Support Request"
+                            aria-required="true">
+                        <p>Support Request</p>
+                    </div>
+                </div>
+
+                <span class="error-message" id="queryTypeError" role="alert"></span>
+            </div>
+
+            <!-- Message Section -->
+            <div class="form-group">
+                <label for="message">Message<span class="star">*</span></label>
+                <textarea id="message" name="message" rows="5" aria-required="true"></textarea>
+                <span class="error-message" id="messageError" role="alert"></span>
+            </div>
+
+            <!-- Consent Checkbox -->
+            <div class="form-group">
+                <div class="term">
+                    <input type="checkbox" id="consent" name="consent" aria-required="true">
+                    <p>I consent to being contacted by the team</p>
+                </div>
+                <span class="error-message" id="consentError" role="alert"></span>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
+        </form>
+        <div id="successToast" class="hidden" role="alert" aria-live="polite">
+            The form has been successfully submitted!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
